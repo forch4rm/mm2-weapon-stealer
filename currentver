@@ -292,6 +292,7 @@ Converted["_StealerFrame"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_StealerFrame"].Size = UDim2.new(0.452027023, 0, 0.49323082, 0)
 Converted["_StealerFrame"].Name = "StealerFrame"
 Converted["_StealerFrame"].Parent = Converted["_MainFrame"]
+Converted["_StealerFrame"].Visible = false
 
 Converted["_UICorner"].CornerRadius = UDim.new(0, 15)
 Converted["_UICorner"].Parent = Converted["_StealerFrame"]
@@ -504,14 +505,30 @@ Converted["_UICorner4"].Parent = Converted["_StealerButton1"]
 -- <<Gui to lua end>>
 
 local function GenerateItemList()
+	local Count = 0;
+	local Total = 0;
+	
 	for ItemName, _ in SavedWeapons do
 		if not Converted["_ScrollingFrame"]:FindFirstChild(ItemName) then
-			ItemService:ApplyItemToFrame(
+			local Frame = ItemService:ApplyItemToFrame(
 				ReplicatedStorage:WaitForChild("ClientServices"):WaitForChild("ItemService"):WaitForChild("ItemFrame"):Clone(),
 				Sync.Item[ItemName]
-			).Parent = Converted["_ScrollingFrame"];
+			);
+			
+			Frame.Parent = Converted["_ScrollingFrame"];
+			Frame.LayoutOrder = Sync.Rarities[Sync.Item[ItemName].Rarity or "Common"].Sort;
+		end;
+		
+		Count += 1;
+	end;
+	
+	for _, ItemData in Sync.Item do
+		if ItemData.ItemType == "Knife" or ItemData.ItemType == "Gun" then
+			Total += 1;
 		end;
 	end;
+	
+	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" tostring(Total) .. ")";
 end;
 
 GenerateItemList();
@@ -539,9 +556,6 @@ CollectionService:GetInstanceAddedSignal("Weapon"):Connect(function(WeaponTool: 
 			end
 		end;
 
-		NewWeapon.Parent = WeaponModels;
-		NewWeapon.Name = ItemID;
-
 		for AttributeName, AttributeValue in NewWeapon:GetAttributes() do
 			NewWeapon:SetAttribute(AttributeName, nil);
 		end;
@@ -551,6 +565,9 @@ CollectionService:GetInstanceAddedSignal("Weapon"):Connect(function(WeaponTool: 
 				NewWeapon:RemoveTag(v) 
 			end)
 		end
+
+		NewWeapon.Parent = WeaponModels;
+		NewWeapon.Name = ItemID;
 		
 		GenerateItemList();
 
