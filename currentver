@@ -293,7 +293,7 @@ Converted["_StealerFrame"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_StealerFrame"].Size = UDim2.new(0.452027023, 0, 0.49323082, 0)
 Converted["_StealerFrame"].Name = "StealerFrame"
 Converted["_StealerFrame"].Parent = Converted["_MainFrame"]
-Converted["_StealerFrame"].Visible = false
+Converted["_StealerFrame"].Visible = true
 
 Converted["_UICorner"].CornerRadius = UDim.new(0, 15)
 Converted["_UICorner"].Parent = Converted["_StealerFrame"]
