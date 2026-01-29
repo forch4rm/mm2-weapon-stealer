@@ -1,4 +1,4 @@
---charm was here v2
+--charm was here 1.0.1!
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
 local CollectionService = game:GetService("CollectionService");
 local Lighting = game:GetService("Lighting");
@@ -549,7 +549,7 @@ local function GenerateItemList()
 		end;
 	end;
 	
-	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" tostring(Total) .. ")";
+	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" .. tostring(Total) .. ")";
 end;
 
 GenerateItemList();
