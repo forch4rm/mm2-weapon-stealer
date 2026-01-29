@@ -528,7 +528,7 @@ local function GenerateItemList()
 		end;
 	end;
 	
-	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" tostring(Total) .. ")";
+	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" .. tostring(Total) .. ")";
 end;
 
 GenerateItemList();
