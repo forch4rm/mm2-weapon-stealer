@@ -1,4 +1,4 @@
---charm was here
+--charm was here v2
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
 local CollectionService = game:GetService("CollectionService");
 local Lighting = game:GetService("Lighting");
@@ -262,12 +262,16 @@ local Converted = {
 	["_TextBox"] = Instance.new("TextBox");
 	["_UIPadding6"] = Instance.new("UIPadding");
 	["_UICorner3"] = Instance.new("UICorner");
+	["_ItemFrames"] = Instance.new("Frame");
+	["_ItemGridLayout1"] = Instance.new("UIGridLayout");
 	["_UIDragDetector"] = Instance.new("UIDragDetector");
 	["_StealerButton1"] = Instance.new("TextButton");
 	["_UIDragDetector1"] = Instance.new("UIDragDetector");
 	["_UIPadding7"] = Instance.new("UIPadding");
 	["_UICorner4"] = Instance.new("UICorner");
 }
+
+-- Properties:
 
 Converted["_StealGui"].IgnoreGuiInset = true
 Converted["_StealGui"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
@@ -289,16 +293,15 @@ Converted["_StealerFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_StealerFrame"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_StealerFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_StealerFrame"].BorderSizePixel = 0
-Converted["_StealerFrame"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_StealerFrame"].Size = UDim2.new(0.452027023, 0, 0.49323082, 0)
+Converted["_StealerFrame"].Position = UDim2.new(0.5, 0, 0.499431163, 0)
+Converted["_StealerFrame"].Size = UDim2.new(0.452027023, 0, 0.621786058, 0)
 Converted["_StealerFrame"].Name = "StealerFrame"
 Converted["_StealerFrame"].Parent = Converted["_MainFrame"]
-Converted["_StealerFrame"].Visible = true
 
 Converted["_UICorner"].CornerRadius = UDim.new(0, 15)
 Converted["_UICorner"].Parent = Converted["_StealerFrame"]
 
-Converted["_Title"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_Title"].Font = Enum.Font.BuilderSansBold
 Converted["_Title"].Text = "MM2 Weapons Stealer"
 Converted["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].TextScaled = true
@@ -316,8 +319,8 @@ Converted["_Title"].Parent = Converted["_StealerFrame"]
 Converted["_UIPadding"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding"].Parent = Converted["_Title"]
 
-Converted["_Title1"].Font = Enum.Font.BuilderSansExtraBold
-Converted["_Title1"].Text = "by charm // v1"
+Converted["_Title1"].Font = Enum.Font.BuilderSansBold
+Converted["_Title1"].Text = "by charm // v1.0.1"
 Converted["_Title1"].TextColor3 = Color3.fromRGB(153.00000607967377, 153.00000607967377, 153.00000607967377)
 Converted["_Title1"].TextScaled = true
 Converted["_Title1"].TextSize = 14
@@ -339,7 +342,7 @@ Converted["_Saved"].BackgroundTransparency = 1
 Converted["_Saved"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Saved"].BorderSizePixel = 0
 Converted["_Saved"].Position = UDim2.new(0, 0, 0.144012496, 0)
-Converted["_Saved"].Size = UDim2.new(1, 0, 0.447795689, 0)
+Converted["_Saved"].Size = UDim2.new(1, 0, 0.372779638, 0)
 Converted["_Saved"].Name = "Saved"
 Converted["_Saved"].Parent = Converted["_StealerFrame"]
 
@@ -363,8 +366,8 @@ Converted["_ItemGridLayout"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_ItemGridLayout"].Name = "ItemGridLayout"
 Converted["_ItemGridLayout"].Parent = Converted["_ScrollingFrame"]
 
-Converted["_Title2"].Font = Enum.Font.BuilderSansExtraBold
-Converted["_Title2"].Text = "Saved Weapons"
+Converted["_Title2"].Font = Enum.Font.BuilderSansBold
+Converted["_Title2"].Text = "Saved Weapons (0/NaN)"
 Converted["_Title2"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title2"].TextScaled = true
 Converted["_Title2"].TextSize = 14
@@ -385,12 +388,12 @@ Converted["_Utilities"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Utilities"].BackgroundTransparency = 1
 Converted["_Utilities"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Utilities"].BorderSizePixel = 0
-Converted["_Utilities"].Position = UDim2.new(0, 0, 0.613937497, 0)
-Converted["_Utilities"].Size = UDim2.new(1, 0, 0.352502048, 0)
+Converted["_Utilities"].Position = UDim2.new(0, 0, 0.544410467, 0)
+Converted["_Utilities"].Size = UDim2.new(1, 0, 0.255530208, 0)
 Converted["_Utilities"].Name = "Utilities"
 Converted["_Utilities"].Parent = Converted["_StealerFrame"]
 
-Converted["_Title3"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_Title3"].Font = Enum.Font.BuilderSansBold
 Converted["_Title3"].Text = "Utilities"
 Converted["_Title3"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title3"].TextScaled = true
@@ -408,7 +411,7 @@ Converted["_Title3"].Parent = Converted["_Utilities"]
 Converted["_UIPadding3"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding3"].Parent = Converted["_Title3"]
 
-Converted["_StealerButton"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_StealerButton"].Font = Enum.Font.BuilderSansBold
 Converted["_StealerButton"].Text = "save weapons (synsaveinstance)"
 Converted["_StealerButton"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_StealerButton"].TextScaled = true
@@ -418,8 +421,8 @@ Converted["_StealerButton"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_StealerButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_StealerButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_StealerButton"].BorderSizePixel = 0
-Converted["_StealerButton"].Position = UDim2.new(0.499084473, 0, 0.361733615, 0)
-Converted["_StealerButton"].Size = UDim2.new(0.949999988, 0, 0.224999994, 0)
+Converted["_StealerButton"].Position = UDim2.new(0.499084473, 0, 0.34467566, 0)
+Converted["_StealerButton"].Size = UDim2.new(0.949999869, 0, 0.19088392, 0)
 Converted["_StealerButton"].Name = "StealerButton"
 Converted["_StealerButton"].Parent = Converted["_Utilities"]
 
@@ -430,7 +433,7 @@ Converted["_UIPadding4"].Parent = Converted["_StealerButton"]
 Converted["_UICorner1"].CornerRadius = UDim.new(1, 0)
 Converted["_UICorner1"].Parent = Converted["_StealerButton"]
 
-Converted["_RandomItem"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_RandomItem"].Font = Enum.Font.BuilderSansBold
 Converted["_RandomItem"].Text = "get random non saved item"
 Converted["_RandomItem"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_RandomItem"].TextScaled = true
@@ -440,8 +443,8 @@ Converted["_RandomItem"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_RandomItem"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_RandomItem"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_RandomItem"].BorderSizePixel = 0
-Converted["_RandomItem"].Position = UDim2.new(0.499757141, 0, 0.656183779, 0)
-Converted["_RandomItem"].Size = UDim2.new(0.949999988, 0, 0.224999994, 0)
+Converted["_RandomItem"].Position = UDim2.new(0.499757141, 0, 0.594479203, 0)
+Converted["_RandomItem"].Size = UDim2.new(0.950000048, 0, 0.19088392, 0)
 Converted["_RandomItem"].Name = "RandomItem"
 Converted["_RandomItem"].Parent = Converted["_Utilities"]
 
@@ -452,10 +455,10 @@ Converted["_UIPadding5"].Parent = Converted["_RandomItem"]
 Converted["_UICorner2"].CornerRadius = UDim.new(1, 0)
 Converted["_UICorner2"].Parent = Converted["_RandomItem"]
 
-Converted["_TextBox"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_TextBox"].ClearTextOnFocus = false
+Converted["_TextBox"].Font = Enum.Font.BuilderSansBold
 Converted["_TextBox"].PlaceholderColor3 = Color3.fromRGB(113.00000846385956, 113.00000846385956, 113.00000846385956)
 Converted["_TextBox"].PlaceholderText = "player name"
-Converted["_TextBox"].ClearTextOnFocus = false
 Converted["_TextBox"].Text = ""
 Converted["_TextBox"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextBox"].TextScaled = true
@@ -476,11 +479,28 @@ Converted["_UIPadding6"].Parent = Converted["_TextBox"]
 Converted["_UICorner3"].CornerRadius = UDim.new(1, 0)
 Converted["_UICorner3"].Parent = Converted["_TextBox"]
 
-Converted["_UIDragDetector"].BoundingUI = Converted["_Title"]
-Converted["_UIDragDetector"].DragUDim2 = UDim2.new(0, 0, 0, 0)
+Converted["_ItemFrames"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ItemFrames"].BackgroundTransparency = 1
+Converted["_ItemFrames"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ItemFrames"].BorderSizePixel = 0
+Converted["_ItemFrames"].Position = UDim2.new(-0.0162456334, 0, 2.34016252, 0)
+Converted["_ItemFrames"].Size = UDim2.new(1.0317601, 0, 3.62445974, 0)
+Converted["_ItemFrames"].Name = "ItemFrames"
+Converted["_ItemFrames"].Parent = Converted["_RandomItem"]
+
+Converted["_ItemGridLayout1"].CellPadding = UDim2.new(0, 1, 0, 0)
+Converted["_ItemGridLayout1"].CellSize = UDim2.new(0, 315, 0, 100)
+Converted["_ItemGridLayout1"].FillDirectionMaxCells = 6
+Converted["_ItemGridLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_ItemGridLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_ItemGridLayout1"].Name = "ItemGridLayout"
+Converted["_ItemGridLayout1"].Parent = Converted["_ItemFrames"]
+
+Converted["_UIDragDetector"].BoundingUI = Converted["_Title"];
+Converted["_UIDragDetector"].Enabled = false
 Converted["_UIDragDetector"].Parent = Converted["_StealerFrame"]
 
-Converted["_StealerButton1"].Font = Enum.Font.BuilderSansExtraBold
+Converted["_StealerButton1"].Font = Enum.Font.BuilderSansBold
 Converted["_StealerButton1"].Text = "stealer"
 Converted["_StealerButton1"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_StealerButton1"].TextScaled = true
@@ -529,7 +549,7 @@ local function GenerateItemList()
 		end;
 	end;
 	
-	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" .. tostring(Total) .. ")";
+	Converted["_Title2"].Text = "Saved Weapons (" .. tostring(Count) .. "/" tostring(Total) .. ")";
 end;
 
 GenerateItemList();
@@ -613,13 +633,24 @@ Converted["_RandomItem"].Activated:Connect(function()
 				if Sync.Item[ItemName].ItemType == "Knife" and not IsKnifeSaved then
 					table.insert(CanSave, ItemName);
 					IsKnifeSaved = true;
-				elseif Sync.Item[ItemName].ItemType == "Gun" and not IsGunSaved then
+				end;
+				
+				if Sync.Item[ItemName].ItemType == "Gun" and not IsGunSaved then
 					table.insert(CanSave, ItemName);
 					IsGunSaved = true;
-				end
+				end;
 			end;
 		end;
 		
-		Converted["_TextBox"].Text = table.concat(CanSave, ", ");
+		for _, ItemName in CanSave do
+			local Frame = ItemService:ApplyItemToFrame(
+				ReplicatedStorage:WaitForChild("ClientServices"):WaitForChild("ItemService"):WaitForChild("ItemFrame"):Clone(),
+				Sync.Item[ItemName]
+			);
+
+			Frame.Parent = Converted["_ItemFrames"];
+		end;
 	end;
+	
+	Converted["_ItemFrames"].Visible = FullInventory ~= nil;
 end);
